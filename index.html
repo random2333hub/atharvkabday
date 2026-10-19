@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy 18th! 🤖💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Pacifico&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff8fd0;--peach:#ffc19e;--lemon:#fff08a;--mint:#8ff0cb;--sky:#8fd3ff;--lav:#c0a2ff;--ink:#5a3d8a;--card:#ffffffd9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:'Fredoka','Comic Sans MS',sans-serif;color:var(--ink);overflow-x:hidden;
+ background:linear-gradient(135deg,#ffd3ec,#e6d2ff,#c8f1ff,#d2ffe8,#fff0c4,#ffd3ec);background-size:400% 400%;animation:bgmove 18s ease infinite}
+@keyframes bgmove{50%{background-position:100% 50%}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
+ background-image:radial-gradient(#fff 2px,transparent 2px),radial-gradient(var(--pink) 1.5px,transparent 1.5px);background-size:44px 44px,30px 30px;background-position:0 0,15px 15px}
+/* floating decor + sparkles */
+.float{position:fixed;bottom:-50px;pointer-events:none;z-index:1;opacity:.75;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg)}}
+.spark{position:fixed;pointer-events:none;z-index:99;font-size:16px;animation:fade .8s forwards}
+@keyframes fade{to{opacity:0;transform:translateY(-24px) scale(.3)}}
+.fall{position:fixed;top:-40px;font-size:1.9rem;pointer-events:none;z-index:98;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(112vh) rotate(540deg)}}
+/* nav */
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:14px 10px;position:sticky;top:0;z-index:50;backdrop-filter:blur(10px)}
+.btn,nav a{font-family:inherit;font-weight:700;font-size:1rem;color:var(--ink);background:var(--lemon);border:3px solid var(--ink);border-radius:999px;
+ padding:9px 20px;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 var(--ink);transition:.15s}
+nav a:nth-child(2),.btn.b2{background:var(--mint)}nav a:nth-child(3),.btn.b3{background:var(--sky)}nav a:nth-child(1),.btn.b1{background:var(--pink)}
+.btn:hover,nav a:hover{transform:translate(-2px,-3px) rotate(-2deg);box-shadow:6px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+nav a.on{background:var(--lav);color:#fff}
+main{position:relative;z-index:5;max-width:940px;margin:auto;padding:10px 18px 60px;text-align:center}
+.page{display:none;animation:pop .5s}.page.on{display:block}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(20px)}}
+h1,h2{font-family:'Pacifico',cursive;font-weight:400;margin:.3em 0}
+h1{font-size:clamp(2.2rem,8vw,4rem);line-height:1.2;background:linear-gradient(90deg,#ff5fb8,#a77bff,#43c7ff,#3be3a8,#ffb347,#ff5fb8);background-size:300%;
+ -webkit-background-clip:text;background-clip:text;color:transparent;animation:rb 6s linear infinite;filter:drop-shadow(3px 3px 0 #fff)}
+@keyframes rb{to{background-position:300%}}
+h2{font-size:2rem;color:#ff4fb0;text-shadow:2px 2px 0 #fff}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:28px;padding:22px;margin:22px auto;box-shadow:7px 7px 0 var(--lav);position:relative}
+.card.c2{box-shadow:7px 7px 0 var(--mint)}.card.c3{box-shadow:7px 7px 0 var(--peach)}
+.sticker{position:absolute;top:-16px;right:-8px;background:var(--pink);color:#fff;border:3px solid var(--ink);border-radius:999px;padding:3px 12px;font-size:.8rem;font-weight:700;transform:rotate(8deg)}
+/* robot */
+.robot{width:180px;margin:18px auto 6px;cursor:pointer;animation:bob 3s ease-in-out infinite;user-select:none}
+@keyframes bob{50%{transform:translateY(-14px) rotate(2deg)}}
+.ant{width:7px;height:30px;background:var(--ink);margin:0 auto;position:relative;border-radius:5px}
+.ant::before{content:"";position:absolute;top:-16px;left:-9px;width:25px;height:25px;border-radius:50%;background:var(--pink);border:3px solid var(--ink);animation:glow 1.4s infinite}
+@keyframes glow{50%{box-shadow:0 0 22px 8px var(--pink)}}
+.head{background:linear-gradient(160deg,#b9fbe3,#8fe3ff);border:4px solid var(--ink);border-radius:42px;height:128px;display:flex;justify-content:center;align-items:center;gap:26px;position:relative;box-shadow:inset -8px -8px 0 #ffffff80}
+.head::before,.head::after{content:"";position:absolute;top:44px;width:16px;height:36px;background:var(--lav);border:3px solid var(--ink);border-radius:8px}
+.head::before{left:-22px}.head::after{right:-22px}
+.eye{width:32px;height:32px;background:var(--ink);border-radius:50%;position:relative;animation:blink 4s infinite}
+.eye::after{content:"";position:absolute;width:11px;height:11px;background:#fff;border-radius:50%;top:6px;left:7px}
+@keyframes blink{94%,100%{transform:scaleY(.1)}}
+.cheek{position:absolute;bottom:28px;width:26px;height:14px;background:var(--pink);border-radius:50%;opacity:.75}
+.mouth{position:absolute;bottom:16px;width:34px;height:16px;border-bottom:4px solid var(--ink);border-radius:0 0 34px 34px}
+.robot:active .mouth{height:24px;background:#ff8fb0}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:130px;height:130px;border-radius:50%;font-size:3.6rem;font-weight:700;color:#fff;
+ background:conic-gradient(var(--pink),var(--lav),var(--sky),var(--mint),var(--lemon),var(--pink));border:5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);animation:bob 2s infinite;text-shadow:3px 3px 0 var(--ink)}
+.gear{display:inline-block;animation:spin 6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+/* terminal */
+.term{background:#2d2250;color:#baffea;border-radius:20px;border:3px solid var(--ink);padding:16px 18px;text-align:left;font-family:'VT323',monospace;font-size:1.35rem;min-height:110px;box-shadow:5px 5px 0 var(--pink)}
+.term::before{content:"● ● ●";display:block;color:var(--pink);letter-spacing:4px;margin-bottom:8px;font-size:1rem}
+.term input{background:transparent;border:0;outline:0;color:#fff;font:inherit;width:75%}
+.bar{height:26px;border:3px solid var(--ink);border-radius:99px;overflow:hidden;background:#fff;margin-top:8px}
+.bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--pink) 0 12px,var(--lav) 12px 24px,var(--sky) 24px 36px);transition:width 3.5s;animation:slide 1s linear infinite;background-size:50px 50px}
+@keyframes slide{to{background-position:50px 0}}
+.marq{overflow:hidden;white-space:nowrap;border:3px solid var(--ink);border-radius:99px;background:var(--lemon);padding:8px 0;margin:22px 0;box-shadow:4px 4px 0 var(--ink);font-weight:700}
+.marq span{display:inline-block;padding-left:100%;animation:mq 18s linear infinite}@keyframes mq{to{transform:translateX(-100%)}}
+.bin{font-family:'VT323',monospace;font-size:1.1rem;opacity:.45;cursor:pointer;word-break:break-all;transition:.3s;letter-spacing:1px}.bin:hover{opacity:1;color:#ff4fb0}
+#secret{display:none;font-family:'Pacifico';font-size:1.8rem;color:#ff4fb0;text-shadow:2px 2px 0 #fff}
+/* photos */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;padding:10px}
+.flip{perspective:900px;height:300px;cursor:pointer;position:relative}
+.flip::before{content:"";position:absolute;top:-10px;left:50%;width:80px;height:24px;margin-left:-40px;background:repeating-linear-gradient(45deg,#ffd0ea99 0 8px,#fff8 8px 16px);border:2px dashed var(--ink);z-index:3;transform:rotate(-4deg)}
+.flip:nth-child(odd){transform:rotate(-3deg)}.flip:nth-child(even){transform:rotate(3deg)}.flip:hover{transform:rotate(0) scale(1.05);z-index:4}
+.in{position:relative;width:100%;height:100%;transition:.7s;transform-style:preserve-3d}.flip.f .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:12px 12px 8px;box-shadow:6px 6px 0 var(--sky);display:flex;flex-direction:column;align-items:center;gap:8px}
+.flip:nth-child(3n+2) .face{box-shadow:6px 6px 0 var(--pink)}.flip:nth-child(3n) .face{box-shadow:6px 6px 0 var(--mint)}
+.face img,.ph{width:100%;height:220px;object-fit:cover;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--lav))}
+.ph{display:flex;align-items:center;justify-content:center;font-size:4rem}
+.back{transform:rotateY(180deg);background:linear-gradient(160deg,var(--lemon),var(--peach));justify-content:center;font-weight:600;font-size:1.15rem;padding:24px}
+/* gift, letter, wishes, balloons */
+.gift{font-size:7rem;cursor:pointer;display:inline-block;animation:wob 1.4s infinite}@keyframes wob{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+#letter{display:none;white-space:pre-wrap;text-align:left;font-size:1.2rem;line-height:1.7;background:repeating-linear-gradient(#fffdf2 0 31px,#ffd9ef 31px 33px);border-radius:16px;padding:20px}
+.wish{display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:10px 16px;margin:7px;box-shadow:4px 4px 0 var(--sky);cursor:pointer;transition:.2s}
+.wish:nth-child(even){box-shadow:4px 4px 0 var(--pink)}.wish:hover{transform:scale(1.08) rotate(-2deg)}
+#slots{font-family:'Pacifico';font-size:2rem;letter-spacing:4px;min-height:50px;color:#ff4fb0;text-shadow:2px 2px 0 #fff;word-break:break-word}
+#balloons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;min-height:90px}
+.bl{width:58px;height:70px;border-radius:50% 50% 48% 48%;border:3px solid var(--ink);cursor:pointer;animation:bob 2.5s ease-in-out infinite;position:relative;transition:.2s}
+.bl::after{content:"";position:absolute;bottom:-14px;left:50%;width:2px;height:14px;background:var(--ink)}
+.bl:hover{transform:scale(1.15)}.bl.gone{transform:scale(2);opacity:0;pointer-events:none}
+.edit-on [data-edit]{outline:3px dashed var(--pink);outline-offset:3px;border-radius:8px}
+#editbtn{position:fixed;right:14px;bottom:14px;z-index:60}
+.edit-on #letter{display:block!important}.edit-on #gift{display:none}
+#panel{display:none;position:fixed;left:12px;bottom:12px;z-index:70;width:300px;max-height:55vh;overflow:auto;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:14px;box-shadow:6px 6px 0 var(--pink);text-align:left;font-size:.9rem}
+.edit-on #panel{display:block}#panel label{display:block;margin:8px 0;font-weight:600}
+#panel input,#panel textarea{width:100%;font-family:inherit;border:2px solid var(--ink);border-radius:10px;padding:6px;margin-top:3px}#panel textarea{height:80px}
+#panel .btn{font-size:.8rem;padding:6px 10px;margin:4px 2px}
+</style></head>
+<body>
+<nav id="nav">
+ <a href="#home">🏠 Home</a><a href="#memories">📸 Memories</a><a href="#surprise">🎁 Surprise</a>
+</nav>
+<main>
+
+<!-- ============ PAGE 1: HOME ============ -->
+<section class="page" id="home">
+ <div class="robot" id="robot"><div class="ant"></div><div class="head"><div class="eye"></div><div class="eye"></div><div class="cheek" style="left:20px"></div><div class="cheek" style="right:20px"></div><div class="mouth"></div></div></div>
+ <small>🤫 psst… poke the robot 5 times</small>
+ <h1>Happy Birthday <span data-cfg="name" data-edit></span>!</h1>
+ <div class="badge">18</div>
+ <p style="font-size:1.25rem" data-cfg="tagline" data-edit></p>
+ <div class="marq"><span data-cfg="marquee" data-edit></span></div>
+ <div class="card c2"><div class="sticker">boot.sh</div>
+  <div class="term" id="boot"></div>
+  <h2><span class="gear">⚙️</span> Loading adulthood...</h2><div class="bar"><i id="bar"></i></div>
+ </div>
+ <a class="btn b2" href="#memories">See memories 📸</a> <a class="btn b3" href="#surprise">Open surprise 🎁</a>
+ <div class="card c3"><div class="sticker">secret 🔍</div><b>there's a hidden message in this code… tap to decode</b>
+  <div class="bin" id="bin"></div><div id="secret"></div></div>
+</section>
+
+<!-- ============ PAGE 2: MEMORIES ============ -->
+<section class="page" id="memories">
+ <h1 data-edit>Memory Bank 💾</h1>
+ <p style="font-size:1.2rem" data-edit>tap a polaroid to flip it 💫</p>
+ <div class="grid" id="grid"></div>
+</section>
+
+<!-- ============ PAGE 3: SURPRISE ============ -->
+<section class="page" id="surprise">
+ <h1 data-edit>Your Surprise! 🎁</h1>
+ <div class="card"><div class="sticker">open me!</div>
+  <div class="gift" id="gift">🎁</div><div id="letter" data-cfg="letter"></div></div>
+ <h2>Wishes.exe 💫</h2><div id="wishes"></div>
+ <h2>Pop the balloons 🎈</h2>
+ <div class="card c2"><div id="slots"></div><div id="balloons"></div></div>
+</section>
+
+</main>
+<div id="panel"><b>🛠️ Editor</b> <small>(click any text on the page to type too!)</small>
+<label>🔓 Secret message<input id="p-secret"></label>
+<label>🎈 Balloon word<input id="p-balloon"></label>
+<label>💻 Boot lines (1 per line)<textarea id="p-boot"></textarea></label>
+<label>💫 Wishes (1 per line)<textarea id="p-wishes"></textarea></label>
+<label>📸 Photos (file | caption, 1 per line)<textarea id="p-photos"></textarea></label>
+<button class="btn b2" id="p-copy">📋 Copy my config</button><button class="btn b3" id="p-dl">⬇️ Download config</button><button class="btn b1" id="p-reset">♻️ Reset</button></div>
+<button class="btn b1" id="editbtn">✏️ Edit mode</button>
+
+<script>
+/* =====================================================
+   ✏️ EDIT YOUR STUFF HERE (everything is in this block)
+   ===================================================== */
+const CONFIG = {
+  name: "Atharv",
+  tagline: "a tiny robot-powered website made with lots of love 💖",
+  marquee: "🤖 HAPPY 18TH ATHARV 🎂 ⚙️ LEVEL 18 UNLOCKED ✨ 💻 KEEP BUILDING, KEEP CODING 🚀 💖 ",
+  hiddenMessage: "HAPPY BIRTHDAY ATHARV!",   // shown in binary + robot easter egg
+  balloonWord: "HAPPY BIRTHDAY",              // letters hidden in the balloons
+  bootLines: [
+    "> booting birthday.exe ...",
+    "> loading 18 years of awesomeness ...",
+    "> bugs found: 0 (jk, 99+) ...",
+    "> status: LEVEL 18 UNLOCKED ✨"
+  ],
+  // 📸 put your images in the /images folder, change file names + captions
+  photos: [
+    { src: "images/1.jpg", caption: "caption for photo 1 🤖" },
+    { src: "images/2.jpg", caption: "caption for photo 2 💻" },
+    { src: "images/3.jpg", caption: "caption for photo 3 🔧" },
+    { src: "images/4.jpg", caption: "caption for photo 4 ✨" },
+    { src: "images/5.jpg", caption: "caption for photo 5 🎂" },
+    { src: "images/6.jpg", caption: "caption for photo 6 🚀" }
+  ],
+  wishes: [
+    "May your code compile on the first try 🙏",
+    "May your robots never go rogue (unless cute) 🤖",
+    "May your wifi be strong & your bugs be tiny 🐛",
+    "Welcome to adulthood… ctrl+alt+delete the stress 💫"
+  ],
+  letter: "Dear Atharv,\n\nWrite your sweet message here. Add your best memories, inside jokes, and what you wish for him this year.\n\nHappy 18th! 🎉\n\n– YOUR NAME",
+  static: {}   // filled automatically by the Copy button (don't worry about it)
+};
+/* ===================== CODE BELOW (no need to touch) ===================== */
+const $=s=>document.querySelector(s),KEY="atharvSite";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const editing=()=>document.body.classList.contains("edit-on");
+// load edits saved in this browser
+try{Object.assign(CONFIG,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(CONFIG))}catch(e){}};
+
+// every text on the page becomes editable in edit mode
+document.querySelectorAll("h1,h2,p,small,nav a,.page .btn,.sticker,.card>b,.badge,.marq span,#letter").forEach(e=>e.setAttribute("data-edit",""));
+const STAT=[...document.querySelectorAll("[data-edit]")].filter(e=>!e.dataset.cfg);
+STAT.forEach((e,i)=>{if(CONFIG.static[i]!=null)e.innerHTML=CONFIG.static[i]});
+document.querySelectorAll("[data-cfg]").forEach(e=>e.textContent=CONFIG[e.dataset.cfg]);
+document.addEventListener("input",e=>{const t=e.target;if(!t.closest||t.closest("#panel"))return;
+ const c=t.closest("[data-cfg]");if(c)CONFIG[c.dataset.cfg]=c.id=="letter"?c.innerText:c.textContent;
+ const s=t.closest("[data-edit]:not([data-cfg])");if(s)CONFIG.static[STAT.indexOf(s)]=s.innerHTML.replace(/ contenteditable="[^"]*"/g,"");
+ save()});
+document.addEventListener("click",e=>{if(editing()&&e.target.closest("a"))e.preventDefault()},true);
+
+// pages
+function route(){const h=(location.hash||"#home").slice(1);document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.id==h));
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.hash=="#"+h));scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+
+// decor
+["🤖","⚙️","💾","✨","💖","🔧","🎀","⭐","🌸","🎮","🔩","🎈"].forEach(e=>{for(let k=0;k<2;k++){const s=document.createElement("div");s.className="float";s.textContent=e;
+ s.style.left=Math.random()*100+"vw";s.style.fontSize=18+Math.random()*22+"px";s.style.animationDuration=14+Math.random()*16+"s";s.style.animationDelay=-Math.random()*20+"s";document.body.append(s)}});
+let last=0;addEventListener("pointermove",e=>{if(Date.now()-last<60)return;last=Date.now();const s=document.createElement("div");s.className="spark";
+ s.textContent=["✨","💖","⭐","🌸"][Math.random()*4|0];s.style.left=e.clientX+"px";s.style.top=e.clientY+"px";document.body.append(s);setTimeout(()=>s.remove(),800)});
+function confetti(n=40){const em=["🎉","💖","✨","🤖","🎂","⭐","💾","🔧","🎈","🌸"];for(let i=0;i<n;i++){const s=document.createElement("span");s.className="fall";
+ s.textContent=em[Math.random()*em.length|0];s.style.left=Math.random()*100+"vw";s.style.animationDuration=2+Math.random()*3+"s";document.body.append(s);setTimeout(()=>s.remove(),5500)}}
+
+// ---------- renderers (re-run when you edit) ----------
+let bt;function runBoot(){const t=$("#boot");t.innerHTML="";let i=0;clearTimeout(bt);(function type(){if(i<CONFIG.bootLines.length){t.innerHTML+=esc(CONFIG.bootLines[i++])+"<br>";bt=setTimeout(type,900)}})()}
+function renderBin(){$("#bin").textContent=[...CONFIG.hiddenMessage].map(x=>x.codePointAt(0).toString(2).padStart(8,"0")).join(" ");$("#bin").style.display="";$("#secret").style.display="none"}
+function renderGrid(){$("#grid").innerHTML=CONFIG.photos.map(p=>`<div class="flip"><div class="in"><div class="face"><img src="${esc(p.src)}" onerror="this.outerHTML='<div class=ph>🤖</div>'"><small>tap to flip 💫</small></div><div class="face back">${esc(p.caption)}</div></div></div>`).join("")}
+function renderWishes(){$("#wishes").innerHTML=CONFIG.wishes.map(w=>`<span class="wish">${esc(w)}</span>`).join("")}
+let shown=[],left=0;
+function drawSlots(){$("#slots").textContent=shown.join(" ")}
+function renderBalloons(){const word=[...(CONFIG.balloonWord||"")];shown=word.map(c=>c==" "?" ":"_");left=word.filter(c=>c!=" ").length;$("#balloons").innerHTML="";drawSlots();
+ word.map((c,i)=>({c,i})).filter(o=>o.c!=" ").sort(()=>Math.random()-.5).forEach(o=>{const b=document.createElement("div");b.className="bl";
+  b.style.background=`hsl(${Math.random()*360},85%,80%)`;b.style.animationDelay=-Math.random()*2+"s";
+  b.onclick=()=>{b.classList.add("gone");shown[o.i]=o.c;drawSlots();confetti(6);if(--left==0){confetti(120);$("#slots").textContent="🎉 "+CONFIG.balloonWord+" 🎉"}};$("#balloons").append(b)})}
+runBoot();setTimeout(()=>$("#bar").style.width="100%",100);renderBin();renderGrid();renderWishes();renderBalloons();
+
+// ---------- interactions ----------
+let c5=0;$("#robot").onclick=()=>{confetti(12);if(++c5==5){c5=0;alert("🤖 beep boop: "+CONFIG.hiddenMessage);confetti(90)}};
+$("#bin").onclick=()=>{if(editing())return;$("#bin").style.display="none";const s=$("#secret");s.style.display="block";s.textContent="🔓 "+CONFIG.hiddenMessage;confetti(90)};
+$("#grid").onclick=e=>{const f=e.target.closest(".flip");if(f)f.classList.toggle("f")};
+$("#wishes").onclick=e=>{if(e.target.classList.contains("wish"))confetti(25)};
+$("#gift").onclick=()=>{$("#gift").style.display="none";$("#letter").style.display="block";confetti(110)};
+
+// ---------- edit mode + editor panel ----------
+const fields={"#p-secret":()=>CONFIG.hiddenMessage,"#p-balloon":()=>CONFIG.balloonWord,
+ "#p-boot":()=>CONFIG.bootLines.join("\n"),"#p-wishes":()=>CONFIG.wishes.join("\n"),"#p-photos":()=>CONFIG.photos.map(p=>p.src+" | "+p.caption).join("\n")};
+$("#editbtn").onclick=()=>{const on=document.body.classList.toggle("edit-on");document.querySelectorAll("[data-edit]").forEach(e=>e.contentEditable=on);
+ if(on)for(const k in fields)$(k).value=fields[k]();$("#editbtn").textContent=on?"✅ Done editing":"✏️ Edit mode"};
+const P=(id,fn)=>$(id).addEventListener("input",e=>{fn(e.target.value);save()});
+P("#p-secret",v=>{CONFIG.hiddenMessage=v;renderBin()});
+P("#p-balloon",v=>{CONFIG.balloonWord=v;renderBalloons()});
+P("#p-boot",v=>{CONFIG.bootLines=v.split("\n");runBoot()});
+P("#p-wishes",v=>{CONFIG.wishes=v.split("\n").filter(Boolean);renderWishes()});
+P("#p-photos",v=>{CONFIG.photos=v.split("\n").filter(l=>l.trim()).map(l=>{const[s,...c]=l.split("|");return{src:s.trim(),caption:c.join("|").trim()}});renderGrid()});
+const getCfg=()=>"const CONFIG = "+JSON.stringify(CONFIG,null,2)+";";
+$("#p-copy").onclick=()=>{const t=getCfg();let box=$("#p-box");
+ if(!box){box=document.createElement("textarea");box.id="p-box";box.style.height="130px";$("#panel").append(box)}
+ box.value=t;box.focus();box.select();box.setSelectionRange(0,t.length);
+ let ok=false;try{ok=document.execCommand("copy")}catch(e){}
+ if(!ok&&navigator.clipboard)navigator.clipboard.writeText(t).then(()=>{},()=>{});
+ alert(ok?"Copied! Now paste it over the whole 'const CONFIG = {...};' block in index.html.":"Auto-copy was blocked by your browser. The config is selected in the box at the bottom of the editor: press Ctrl+A then Ctrl+C (or tap-and-hold, then Copy). You can also tap 'Download config'.")};
+$("#p-dl").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([getCfg()],{type:"text/plain"}));a.download="my-config.txt";document.body.append(a);a.click();a.remove()};
+$("#p-reset").onclick=()=>{if(confirm("Undo all edits made in this browser?")){localStorage.removeItem(KEY);location.reload()}};
+</script>
+</body></html>
